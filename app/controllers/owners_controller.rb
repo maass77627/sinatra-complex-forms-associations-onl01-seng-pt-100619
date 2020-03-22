@@ -1,3 +1,4 @@
+require 'pry'
 class OwnersController < ApplicationController
 
   get '/owners' do
@@ -6,10 +7,13 @@ class OwnersController < ApplicationController
   end
 
   get '/owners/new' do 
+    @pets = Pet.all 
     erb :'/owners/new'
   end
 
   post '/owners' do 
+    
+   # binding.pry
     
   end
 
